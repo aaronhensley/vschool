@@ -1,6 +1,7 @@
-var result = document.querySelectorAll("ol#stuff > li")
-console.log(Array.from(result))
+var text = document.querySelector("para").textContent
+document.querySelector("head").textContent = text
 
-for (var i = 0; i< result.length; i++){
-    result[i],textContent = "Not Stuff"
-}
+var myBtn = document.getElementById("head")
+myBtn.addEventListener("click" , function(){
+alert("No")
+})
