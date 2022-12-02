@@ -26,3 +26,14 @@ document.body.prepend(newP)
 newP.textContent = "Did it work?"
 newP.style.fontSize = "60px"
 newP.style.textAlign = ("center")
+
+stuff.innerHTML += "<li>Hello</li>"
+
+document.body.innerHTML += "<p>You can do it</p>"
+
+// for(var i = 0; i < 15; i++){
+//     var newDiv = document.createElement("div")
+//     stuff.prepend(newDiv)
+//     newDiv.textContent = "Too many"
+// }
+// console.log(i)
