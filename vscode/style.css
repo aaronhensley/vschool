@@ -1,3 +1,11 @@
-.boxed{
-    font-size: 300px;
+.box{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -50px;
+ 
 }
