@@ -29,7 +29,7 @@ var allMessages = document.getElementsByClassName("message");
 
 var clearBtn = document.getElementById("clear-button");
 clearBtn.addEventListener("click", function () {
-    for (let i = 0; i <= allMessages.length; i++) {
+    for (let i = 0, max = allMessages.length; i < max; i++) {
         allMessages[i].textContent = "";
         allMessages[i].style.backgroundColor = "white";
     }
@@ -53,22 +53,23 @@ function changeTheme(e) {
 
 function redBlack() {
     console.log(messageRight)
-    for (let i = 0; i <= messageRight.length; i++) {
+    console.log(messageLeft)
+    for (let i = 0, max = messageRight.length; i < max; i++) {
         messageRight[i].style.backgroundColor = "black";
         messageRight[i].style.color = "white";
     }
-    for (let i = 0; i <= messageLeft.length; i++) {
+    for (let i = 0, max = messageLeft.length; i< max; i++) {
         messageLeft[i].style.backgroundColor = "red";
         messageLeft[i].style.color = "white";
     }
 }
 
 function brownBlue() {
-    for (let i = 0; i <= messageRight.length; i++) {
+    for (let i = 0, max = messageLeft.length; i < max; i++) {
         messageRight[i].style.backgroundColor = "lightblue";
         messageRight[i].style.color = "black";
     }
-    for (let i = 0; i <= messageLeft.length; i++) {
+    for (let i = 0, max = messageLeft.length; i < max; i++) {
         messageLeft[i].style.backgroundColor = "burlywood";
         messageLeft[i].style.color = "black";
     }
@@ -90,5 +91,15 @@ sendBtn.addEventListener("click", function (e) {
     }
     newDiv.textContent = sendInput.value;
     messages[0].append(newDiv);
+    if (myTheme.value === "theme-one"){
+        brownBlue()
+    }else{
+        redBlack()
+    }
+    if (sendInput.value === ""){    
+        newDiv.style.backgroundColor = "white"
+    }
     sendInput.value = "";
 });
+
+
