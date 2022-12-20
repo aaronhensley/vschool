@@ -5,12 +5,30 @@
     <body>
         <h1>Form Practice</h1>
 
-        <form name="my-form">UserName:
-            <input required name="firstName" type="text"/> 
-            <input required name="lastName" type="text"/>
+        <form name="myForm">
+            <!-- <input placeholder="First" name="firstName" type="text"/> 
+            <input placeholder="Last" name="lastName" type="text"/> -->
+            Yes<input name="yesOrNo" type="radio" value="yes"/>
+            No<input name="yesOrNo" type="radio" value="no"/>
+            Which are your favorite? Select all that apply
+            Movies: <input type="checkbox" value="Movies" name="entertainment"/>
+            Games: <input type="checkbox" value="Games" name="entertainment"/>
             <button>Submit</button>
-            
+
+            <select name="city">
+                <option value="Paris">Paris</option>
+                <option value="New York">New York</option>
+                <option value="Chicago">Chicago</option>
+            </select>
+           <!-- <input name="color" type="color"/> -->
+
         </form>
+        <!-- <form name="words">
+            <input placeholder="noun" name="noun"/>
+            <input placeholder="adverb" name="adverb"/>
+            <input placeholder="verb" name="verb"/>
+            <button>Submit</button>
+        </form> -->
 
 
 
