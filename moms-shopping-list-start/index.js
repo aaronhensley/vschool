@@ -21,6 +21,7 @@ form.addEventListener("submit", (event) => {
     newEditBtn.textContent = "edit";
     listItem.append(newEditBtn);
 
+    // delete item
     const newDelete = document.createElement("button");
     newDelete.textContent = "X";
     listItem.append(newDelete);
@@ -31,10 +32,10 @@ form.addEventListener("submit", (event) => {
             newDelete.parentNode.removeChild(newDelete);
         }
     });
+    
     //replace edit with save
     newEditBtn.addEventListener("click", function () {
         const newSave = document.createElement("button");
-
         newSave.textContent = "save";
         listItem.append(newSave);
         newEditBtn.style.display = "none";

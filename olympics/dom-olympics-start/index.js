@@ -25,6 +25,8 @@ messageThree.textContent = "Just wanted to say, I hope you have a nice day";
 var messageFour = document.getElementById("message four");
 messageFour.textContent = "Thank you!";
 
+//delete all
+
 var allMessages = document.getElementsByClassName("message");
 
 var clearBtn = document.getElementById("clear-button");
@@ -34,6 +36,8 @@ clearBtn.addEventListener("click", function () {
         allMessages[i].style.backgroundColor = "white";
     }
 });
+
+//change theme
 
 var messageLeft = document.getElementsByClassName("message left");
 var messageRight = document.getElementsByClassName("message right");
@@ -74,6 +78,8 @@ function brownBlue() {
         messageLeft[i].style.color = "black";
     }
 }
+
+//add mew message
 
 var sendBtn = document.getElementById("send");
 var sendInput = document.getElementById("input");
