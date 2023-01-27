@@ -6,6 +6,7 @@ function Employee(name, jobTitle, salary, status){
     this.status = "Full Time"
     this.printEmployeeForm = function(){
         console.log(`name:${name}, jobTitle:${jobTitle}, salary:${salary}, status:${"Full Time"}`)
+        
     }
 }
 const jimmy = new Employee("Jimmy", "Pilot", "80,000/y", ) 
