@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+/* Mobile Design */
+#box1 {
+    border: 1px solid green;
+    padding: 10px 5px 10px 5px;
+    margin-bottom: 5px;
+    background-color: darkcyan;
+}
+#box2{
+    border: 1px solid blue;
+   padding: 10px 5px 10px 5px;
+   margin-top: 10px;
+}
+
+/* Larger Phones */
+@media only screen and (min-width: 400px){
+    #box1 {
+        border: 4px dashed red;
+        padding: 10px 5px 10px 5px;
+        margin-bottom: 5px;
+        background-color: blue;
+    }
+    #box2{
+        border: 1px solid blue;
+       padding: 10px 5px 10px 5px;
+       margin-top: 10px;
+       background-color: firebrick;
+    }
+    
+}
+/* Tablet */
+@media only screen and (min-width: 650px){
+    #box1 {
+        border: 8px solid purple;
+        padding: 10px 5px 10px 5px;
+        margin-bottom: 5px;
+        
+    }
+    #box2{
+        
+       padding: 10px 5px 10px 5px;
+       margin-top: 10px;
+       background-color: cornflowerblue;
+    }
+}
+@media only screen and (min-width: 650px) and (max-width: 700px){
+    body {
+        background-color: yellow;
+    }
+}
+
+
+
+
+/* The order of the Box Model from inside out:
+
+1. Content (the element's context such as text)
+2. Padding (the spacing between the content and the element's border)
+3. Border (the element's border)
+4. Margin (the spacing between the elements border and other neighboring elements)
+The order is important: 1) top, 2) right, 3) bottom, and 4) left. With these in mind, the following rules apply:
+
+- If you have a single value:
+    - Your value applies to **all 4 sides**
+- If you have 2 values:
+    - The **first value** applies to the **top and bottom** sides, and
+    - The **second value** applies to the **right and left** sides.
+- If you have 3 values:
+    - The first value applies to the top side,
+    - The second value applies to the right and left sides, and
+    - The third value applies to the bottom side.
+- If you have 4 values:
+    - The order of the values goes, respectively, **top, right, bottom, left**. 
+-Remeber fixed and absolute positioning
+-Media queries act like if then statements and can also be and statements
+*/
