@@ -1,0 +1,88 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  
+}
+#grid-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 500px;
+    margin: 100px;
+    gap: 5px;
+}
+
+#grid-container > div:nth-child(1){
+    height: 30px;
+    background-color: crimson;
+    grid-column: 1/7;
+}
+
+#grid-container > div:nth-child(2){
+    height: 30px;
+    background-color: blue;
+    grid-column: 7/13;
+}
+
+#grid-container > div:nth-child(3){
+    height: 30px;
+    background-color:green;
+    grid-column: 1/2;
+}
+
+#grid-container > div:nth-child(4){
+    height: 30px;
+    background-color: purple;
+    grid-column: 2/13;
+}
+
+#grid-container > div:nth-child(5){
+    height: 30px;
+    background-color: yellow;
+    grid-column: 1/-1;
+}
+
+#grid-container2{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 500px;
+    height: 400px;
+    margin: 100px;
+    gap: 4px;
+}
+
+#grid-container2 > div:nth-child(1){
+    
+    background-color: crimson;
+    grid-column: 1/13;
+    grid-row: 1/2;
+}
+
+#grid-container2 > div:nth-child(2){
+    
+    background-color: blue;
+    grid-column: 1/7;
+    grid-row: 2/7;
+}
+
+#grid-container2 > div:nth-child(3){
+    background-color:green;
+    grid-column: 7/13;
+    grid-row: 2/3;
+}
+
+#grid-container2 > div:nth-child(4){
+    
+    background-color: purple;
+    grid-column: 7/10;
+    grid-row: 3/7;
+}
+
+#grid-container2 > div:nth-child(5){
+    
+    background-color: purple;
+    grid-column: 10/13;
+    grid-row: 3/7;
+}
+
+

@@ -1,8 +1,122 @@
-* {
-    box-sizing: border-box;
+
+#header{
+    /* position: fixed; */
+    background-color: dimgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:skyblue
+   
 }
+
+#flex-container{
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+        /* Automatically set to row 
+        #flex-direction: row (default):
+        - justify-content: left to right
+        - align-items: top to bottom
+    
+        #flex-direction: column
+        - justify-content: top to bottom
+        - align-items: left to right*/
+        justify-content:space-around;
+        /* justifies left and right */
+        height: 200px;
+        align-items: center;
+        /* aligns from top to bottom */
+        /* Center is the best way to put stuff right in the middle */
+
+}
+#flex-container > div:nth-child(1){
+    background-color: blue;
+    height: 30px;
+}
+#flex-container > div:nth-child(2){
+    background-color: crimson;
+    height: 30px;
+}
+#flex-container > div:nth-child(3){
+    background-color: darkgreen;
+    height: 30px;
+}
+
+/* Grid Practice */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    font-size: 22px;
+    background-color: dodgerblue;
+    text-align: center;
+    grid-column: 1/13;
+    /* tells how many lines long it will be */
+    
+}
+
+nav {
+    background-color: darkorchid;
+    grid-column: 8/13;
+}
+
+nav > div {
+    border: 1px solid black;
+    border-radius: 3px;
+    text-align: center;
+}
+
+main {
+    background-color: darkgreen;
+    grid-column: 1/8;
+    grid-row: 2/3;
+   
+}
+
+footer {
+    font-size: 20px;
+    background-color: darkslateblue;
+    text-align: center;
+    grid-column: 1/13;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* fractionals allow us to set the width in proportion to the page size, imagine working as percentages*/
+}
+
+/* Check out grid template area 
+    Use this to lable:
+        .header {
+    grid-area: h;
+}
+
+.menu {
+    grid-area: m;
+}
+
+.content {
+    grid-area: c;
+}
+
+.footer {
+    grid-area: f;
+}
+grid-template-areas:
+        "m h h h h h h h h h h h"
+        "m c c c c c c c c c c c"
+        "f f f f f f f f f f f f";
+        dots can be used for blank space
+*/
+
+
 /* Mobile Design */
-#box1 {
+/* #box1 {
     border: 1px solid green;
     padding: 10px 5px 10px 5px;
     margin-bottom: 5px;
@@ -12,10 +126,10 @@
     border: 1px solid blue;
    padding: 10px 5px 10px 5px;
    margin-top: 10px;
-}
+} */
 
 /* Larger Phones */
-@media only screen and (min-width: 400px){
+/* @media only screen and (min-width: 400px){
     #box1 {
         border: 4px dashed red;
         padding: 10px 5px 10px 5px;
@@ -29,9 +143,9 @@
        background-color: firebrick;
     }
     
-}
+} */
 /* Tablet */
-@media only screen and (min-width: 650px){
+/* @media only screen and (min-width: 650px){
     #box1 {
         border: 8px solid purple;
         padding: 10px 5px 10px 5px;
@@ -49,7 +163,7 @@
     body {
         background-color: yellow;
     }
-}
+} */
 
 
 
