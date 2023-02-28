@@ -31,7 +31,8 @@ const player = {Name: name,
 
 }
 
-if (player.hp === 0){
+if (player.hp <= 0){
+    console.log("You're Dead!")
     isAlive = false
 }
 
@@ -41,12 +42,34 @@ while(inBattle === true){
     enemeyBattle()
 }
 
+// Stuck here
 
 function enemeyBattle(){
     inBattle = true
-    const diceRoll = enemies.find[Math.floor(Math.random()*enemies.find(item => item.id === "type"))]
-    console.log("You encountered a " + diceRoll)
+    const diceRollEnemie = enemies.find[Math.floor(Math.random()*enemies.length)] 
+    console.log("You encountered a " + diceRollEnemie)
     index = readline.keyInSelect(combatActions, "What will you do next?")
+    if (combatActions[index] === "Run"){
+        const diceRollDamage = Math.floor(Math.random() * 2 + 1)
+        const playerDamage = player.hp = player.hp - diceRollDamage
+        const diceRollEscape = Math.floor(Math.random() * 2 + 1)
+        console.log(diceRollEscape)
+        if (diceRollEscape === 1){
+            console.log("You Escaped")
+            inBattle = false
+        }else {
+            console.log("You could not escape")
+            console.log("You took " + diceRollDamage + " damage! " + " HP Left:", playerDamage)
+            enemeyBattle()
+        }
+        console.log("You took " + diceRollDamage + " damage! " + " HP Left:", playerDamage)
+
+        if (player.hp <= 0){
+            console.log("You're Dead!")
+            isAlive = false
+        }
+
+    }
 
 }
 // Will an enemy appear?
