@@ -1,14 +1,52 @@
 const readline = require("readline-sync");
 const name = readline.question("What is your name?")
 
-const regularActions = ["Walk", "Don't Walk", "Give Up?"]
+const regularActions = ["Walk", "Don't Walk", "Inventory", "Give Up?"]
 
 const combatActions = ["Run", "Attack"]
 
+const enemies = [
+    {
+        type: "Goblin",
+        hp: 3
+    },
+    {
+        type: "Skeleton",
+        hp: 4
+    },
+    {
+        type: "Zombie",
+        hp: 6
+    }
+    
+    ]
+
 let isAlive = true
+
+let inBattle = false
+
+const player = {Name: name,
+                hp: 6,
+                Items: []
+
+}
+
+if (player.hp === 0){
+    isAlive = false
+}
+
+
+
+while(inBattle === true){
+    enemeyBattle()
+}
 
 
 function enemeyBattle(){
+    inBattle = true
+    const diceRoll = enemies.find[Math.floor(Math.random()*enemies.find(item => item.id === "type"))]
+    console.log("You encountered a " + diceRoll)
+    index = readline.keyInSelect(combatActions, "What will you do next?")
 
 }
 // Will an enemy appear?
@@ -28,7 +66,7 @@ if (diceRoll === 1 ){
 function walk (){
     index = readline.keyInSelect(regularActions, "What do you want to do?")
     if (regularActions[index] === "Give Up?"){
-        console.log("You're Dead")
+        console.log("You're Dead!")
         isAlive = false
     }else if (regularActions[index] === "Walk"){
         enemeyChance()
@@ -36,6 +74,9 @@ function walk (){
         console.log("You decided to lay back down and try again later.")
         console.log("What will you do next?")
     } 
+    else if (regularActions[index] === "Inventory"){
+        console.log(player)
+    }
 }
 
 // Start
