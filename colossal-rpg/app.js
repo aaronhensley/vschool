@@ -5,6 +5,8 @@ const regularActions = ["Walk", "Don't Walk", "Inventory", "Give Up?"]
 
 const combatActions = ["Run", "Attack"]
 
+const attack = ["Attack"]
+
 const enemies = [
     {
         type: "Goblin",
@@ -25,6 +27,8 @@ let isAlive = true
 
 let inBattle = false
 
+let attacking = false
+
 const player = {Name: name,
                 hp: 6,
                 Items: []
@@ -42,17 +46,25 @@ while(inBattle === true){
     enemeyBattle()
 }
 
-// Stuck here
+while(attacking === true){
+    combatDamage()
+}
+
+
+
+
 
 function enemeyBattle(){
     inBattle = true
-    const diceRollEnemie = enemies.find[Math.floor(Math.random()*enemies.length)] 
+    const diceRollEnemie = enemies[Math.floor(Math.random()*enemies.length)].type
     console.log("You encountered a " + diceRollEnemie)
     index = readline.keyInSelect(combatActions, "What will you do next?")
     if (combatActions[index] === "Run"){
         const diceRollDamage = Math.floor(Math.random() * 2 + 1)
         const playerDamage = player.hp = player.hp - diceRollDamage
         const diceRollEscape = Math.floor(Math.random() * 2 + 1)
+        
+
         console.log(diceRollEscape)
         if (diceRollEscape === 1){
             console.log("You Escaped")
@@ -69,8 +81,19 @@ function enemeyBattle(){
             isAlive = false
         }
 
+    }else if (combatActions[index] === "Attack"){
+        function combatDamage(){
+            attacking = true
+            const heroStrength = Math.floor(Math.random() * 3 + 1)
+            console.log(heroStrength)
+            index = readline.keyInSelect(attack, "Keep Fighting!")
+            const enemyDamage = enemies.hp = enemies.hp - heroStrength
+            console.log(enemies.hp)
+            
+        }
+        
     }
-
+    
 }
 // Will an enemy appear?
 
